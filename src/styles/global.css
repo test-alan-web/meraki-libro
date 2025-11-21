@@ -1386,8 +1386,10 @@ button.learn-more:active::before {
   box-shadow: none;
 }
 /* ===========================
-   NAVBAR ROSA FLOANTE (derecha)
+   Mantenemos el estilo original del Navbar sin cambios en la estructura
    =========================== */
+
+/* Navbar flotante y el diseño de los íconos */
 .meraki-fab {
   display: flex;
   align-items: center;
@@ -1399,6 +1401,7 @@ button.learn-more:active::before {
   box-shadow: 0 12px 30px rgba(255, 0, 120, 0.4);
 }
 
+/* Ajustamos el tamaño de los íconos para pantallas pequeñas */
 .meraki-fab-item {
   position: relative;
   outline: 0;
@@ -1423,6 +1426,7 @@ button.learn-more:active::before {
   justify-content: center;
 }
 
+/* Estilo para la funcionalidad de tooltip */
 .meraki-fab-item::after {
   content: attr(data-label);
   white-space: nowrap;
@@ -1444,6 +1448,83 @@ button.learn-more:active::before {
   transform: translateX(0);
   max-width: 6rem;
 }
+
+/* ===========================
+   Sección responsive para pantallas pequeñas
+   =========================== */
+
+@media (max-width: 768px) {
+  /* Aseguramos que el navbar se mantenga en una sola línea en pantallas pequeñas */
+  .flex {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .meraki-fab {
+    display: flex;
+    justify-content: space-evenly; /* Distribuye los íconos para que no se amontonen */
+    gap: 1rem;
+  }
+
+  /* Ajustamos el tamaño de los íconos y botones de navegación */
+  .meraki-fab-item {
+    padding: 0.25rem;
+  }
+
+  /* Ajustamos el tamaño de los íconos */
+  .meraki-fab-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* Para que el logo y los elementos de texto no se sobrecarguen en pantallas pequeñas */
+  .leading-tight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+/* ===========================
+   Transición para el efecto de tooltip
+   =========================== */
+.meraki-fab-item:hover::after {
+  max-width: 6rem; /* Aseguramos que el tooltip no se corte */
+}
+
+/* ===========================
+   Estilo de los botones de navegación (en móvil y PC)
+   =========================== */
+
+.nav-button {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: #020617;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+}
+
+.nav-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 
 /* ===========================
    TRANSICIONES DE SECCIÓN (ondas)
@@ -1724,60 +1805,4 @@ button.learn-more:active::before {
 
 .social-icons a:hover {
   color: #ffb7ce;
-}
-
-/* ===========================
-   Mantenemos el estilo original del Navbar y ajustamos solo para móvil
-   =========================== */
-
-/* Sin cambios en la estructura */
-@media (max-width: 1024px) {
-  /* Ajustamos el logo y los textos para que no se desborden en pantallas pequeñas */
-  .nav-pill__btn {
-    font-size: 16px; /* Ajuste en el tamaño de los íconos */
-    padding: 10px; /* Reducción de padding para un mejor ajuste en pantallas pequeñas */
-  }
-
-  /* Ajustamos el contenedor de los botones de navegación */
-  .nav-pill {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px; /* Ajustamos el espacio entre los botones */
-    flex-wrap: wrap; /* Permitimos que los botones se ajusten en una fila */
-  }
-
-  .meraki-fab {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  .meraki-fab-item {
-    font-size: 18px; /* Ajustamos el tamaño de los íconos en móvil */
-    padding: 8px; /* Ajustamos el padding de los íconos */
-  }
-
-  /* Si es necesario ajustamos el tamaño de los íconos */
-  .meraki-fab-icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Si estamos en móvil, no cambiaremos la estructura del navbar, solo ajustamos el tamaño y el espaciado */
-@media (max-width: 768px) {
-  /* Ajustamos el navbar de modo que no se oculte, sino que se ajuste */
-  .flex {
-    display: flex !important; /* Aseguramos que no se oculte el navbar */
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /* Para el logo y nombre */
-  .leading-tight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
 }
