@@ -1725,3 +1725,16 @@ button.learn-more:active::before {
 .social-icons a:hover {
   color: #ffb7ce;
 }
+
+/* Ajustes generales para mantener el diseño consistente */
+@media (max-width: 1024px) {
+	/* No cambiamos la estructura, solo ajustamos el tamaño de los elementos */
+	.nav-pill {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav-pill__btn {
+		font-size: 14px; /* Ajustamos el tamaño para que encaje mejor en pantallas pequeñas */
+	}
+}
