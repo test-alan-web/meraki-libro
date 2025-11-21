@@ -164,11 +164,6 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
         </ul>
       </div>
     </header>
-
-    <main>
-      <slot />
-    </main>
-
     <footer class="site-footer mt-20">
   <div class="footer-inner mx-auto max-w-6xl px-4 py-10">
     <section
@@ -213,7 +208,7 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
                 </div>
                 <a
                   class="contact-chat-send"
-                  href="mailto:alanheoa@gmail.com"
+                  href="mailto:merakimultisensorial@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -228,15 +223,7 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
 
       {/* Columna info + redes */}
       <div class="footer-side">
-        <div class="footer-info">
-          <p class="footer-label">Email</p>
-          <a
-            class="footer-link"
-            href=""mailto:alanheoa@gmail.com
-          >
-            alanheoa@gmail.com
-          </a>
-        </div>
+        
 
         <div class="footer-social-block">
           <p class="footer-label mb-3">Redes</p>
@@ -245,9 +232,9 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
             {/* Gmail */}
             <li class="social-item" data-social="gmail">
               <a
-                href="mailto:alanva091104@gmail.com"
+                href="mailto:merakimultisensorial@gmail.com"
                 aria-label="Gmail"
-              >
+                >
                 <span class="social-fill"></span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -265,7 +252,7 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
 
     <div class="footer-copy">
       <p>
-        © {new Date().getFullYear()} Alan Hernández. Todos los derechos
+        © {new Date().getFullYear()} Meraki. Todos los derechos
         reservados.
       </p>
     </div>
@@ -294,7 +281,7 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
 .site-footer {
   border-top: 1px solid rgba(15, 23, 42, 0.9);
   background: radial-gradient(circle, var(--meraki-pink), var(--meraki-blue));
-  color: #cbd5f5;
+  color: #1c1c1cff;
 }
 
 .footer-grid {
@@ -355,8 +342,7 @@ const { title = 'Meraki · Pedagogía' } = Astro.props;
 }
 
 .contact-chat {
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.1), transparent 55%),
-    rgba(15, 23, 42, 0.96);
+  background: var (--meraki-bg);
   border-radius: 1rem;
   padding: 0.85rem;
   display: flex;
