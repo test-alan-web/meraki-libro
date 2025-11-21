@@ -1685,3 +1685,43 @@ button.learn-more:active::before {
   left: 40%;
   filter: blur(0);
 }
+/* Ajustes navbar móvil */
+@media (max-width: 768px) {
+  .meraki-fab {
+    display: block;
+  }
+  .meraki-fab-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* Cambiar tamaños y disposición en el mobile navbar */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* Ajuste al botón de compartir */
+.tooltip-content {
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffb7ce;
+}
