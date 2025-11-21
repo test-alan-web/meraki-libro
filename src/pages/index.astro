@@ -24,21 +24,21 @@ import Layout from '../layouts/Layout.astro';
         <h1
           class="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl"
         >
-          Glosario de
+          Manual digital de
           <span class="text-sky-700">Psicopedagogía Interactiva</span>
         </h1>
 
         <p class="max-w-xl text-base text-slate-700">
-          Un espacio digital pensado para <strong>pedagogas y
-          psicopedagogas</strong> que desean explorar conceptos clave, navegar
+          Un espacio digital pensado para <strong>pedagogos
+          </strong> que desean explorar conceptos clave, navegar
           un <strong>libro interactivo</strong> y
           <strong>agregar sus propias hojas</strong> para enriquecer la
           propuesta.
         </p>
 
         <div class="mt-4 flex flex-wrap items-center gap-4">
-          <button class="learn-more">
-            Explorar glosario
+          <button type="button" class="learn-more" onclick="window.location.hash = '#colabora'">
+            COLABORAR
           </button>
 
           <button
@@ -55,6 +55,28 @@ import Layout from '../layouts/Layout.astro';
               <div class="circle"></div>
             </div>
           </button>
+          <!-- Botón Share fancy -->
+          <div class="tooltip-container">
+            <div class="button-content">
+              <span class="text">Compartir libro</span>
+              <svg
+                class="share-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"
+                ></path>
+              </svg>
+            </div>
+            <div class="tooltip-content">
+              <div class="social-icons">
+                <!-- icons reales los tienes ya en tu CSS/HTML original -->
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="mt-4">
@@ -131,7 +153,6 @@ import Layout from '../layouts/Layout.astro';
                 </li>
               </ul>
             </div>
-            <span>Loading</span>
           </div>
 
           <p class="mt-4 text-center text-xs text-slate-500">
@@ -155,56 +176,65 @@ import Layout from '../layouts/Layout.astro';
           Contexto del proyecto
         </p>
         <h2 class="mt-2 text-3xl font-bold text-slate-900">
-          Información clave del glosario y la investigación
+          Información clave del manual digital y la investigación
         </h2>
         <p class="mt-3 text-sm text-slate-600">
-          Basado en un artículo de investigación sobre
-          <strong>aprendizaje multisensorial</strong> y
-          <strong>psicopedagogía</strong>, este sitio resume los hallazgos
-          principales y los transforma en un recurso práctico para el aula de
-          secundaria.
+          <strong>El aula que se siente, se escucha y se vive</strong>, 
+          una herramienta creada para acompañar y fortalecer la práctica 
+          docente desde un enfoque multisensorial, donde la vista, 
+          el oído, el tacto, el movimiento y la emoción se integran 
+          como elementos clave para favorecer aprendizajes más 
+          profundos y duraderos.
         </p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-3">
-        <article
-          class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100"
-        >
+        <a
+        href="/detalle/psicopedagogia"
+        class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-md"
+      >
           <h3 class="font-display text-lg font-semibold text-slate-900">
-            ¿Qué es la Psicopedagogía?
+            Objetivo general
           </h3>
           <p class="mt-2 text-sm text-slate-600">
-            Disciplina que integra psicología y educación para comprender cómo
-            aprenden las personas, detectar barreras y proponer apoyos
-            específicos.
+            El proyecto propone diseñar un <strong>manual digital colaborativo</strong> para docentes 
+            de secundaria que facilite el uso de <strong>estrategias multisensoriales</strong> para mejorar 
+            la motivación, la participación y el aprendizaje significativo. Se fundamenta 
+            en teorías de Piaget, Vygotsky y Ausubel, que destacan el carácter constructivo, 
+            social y significativo del aprendizaje.
           </p>
-        </article>
+        </a>
 
-        <article
-          class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100"
-        >
+        <a
+        href="/detalle/psicopedagogia"
+        class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-md"
+      >
           <h3 class="font-display text-lg font-semibold text-slate-900">
-            Enfoque del glosario
+            Propuesta
           </h3>
           <p class="mt-2 text-sm text-slate-600">
-            Cada término está pensado para ser <strong>claro, aplicable</strong>
-            y conectado con situaciones reales del aula, especialmente en
-            educación secundaria.
+            El manual “El aula que se siente, se escucha y se vive” se propone como una herramienta digital 
+            para ayudar a docentes de secundaria a implementar el aprendizaje multisensorial. Busca ofrecer 
+            estrategias más dinámicas y humanas para enfrentar la falta de interés estudiantil, y fomentar 
+            una comunidad docente que comparta ideas y experiencias.
           </p>
-        </article>
+        </a>
 
-        <article
-          class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100"
-        >
+        <a
+        href="/detalle/psicopedagogia"
+        class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-md"
+      >
           <h3 class="font-display text-lg font-semibold text-slate-900">
-            Libro como herramienta
+            Teorias
           </h3>
           <p class="mt-2 text-sm text-slate-600">
-            El libro interactivo funciona como un <strong>manual digital</strong>
-            que puede ampliarse con nuevas hojas creadas por docentes según su
-            contexto.
+            <ul>
+            <li> • Jean Piaget – Teoría del Desarrollo Cognitivo.</li>
+            <li> • Lev Vygotsky – Teoría Sociocultural del Aprendizaje.</li>
+            <li> • Idea clave: Aprendemos mejor acompañados y guiados.</li>
+            </ul>
           </p>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -228,9 +258,10 @@ import Layout from '../layouts/Layout.astro';
           Manual digital de Psicopedagogía Interactiva
         </h2>
         <p class="mt-3 text-sm text-slate-700">
-          Aquí viven las páginas en formato imagen (1.jpeg, 2.jpeg, …) organizadas
-          como un <strong>flipbook</strong> navegable. Ya dejamos listo el
-          contenedor para conectar la lógica en JavaScript.
+          Antes de comenzar, revisa los apartados del manual y llena tu página 
+          con una estrategia propia, describiendo su objetivo, pasos, materiales, 
+          sentidos involucrados y las evidencias esperadas. Tu contribución ayudará 
+          a enriquecer este recurso colectivo y fortalecer la práctica docente.
         </p>
       </div>
 
@@ -308,29 +339,6 @@ import Layout from '../layouts/Layout.astro';
               </a>
             </div>
           </div>
-
-          <!-- Botón Share fancy -->
-          <div class="tooltip-container">
-            <div class="button-content">
-              <span class="text">Compartir libro</span>
-              <svg
-                class="share-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
-                <path
-                  d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"
-                ></path>
-              </svg>
-            </div>
-            <div class="tooltip-content">
-              <div class="social-icons">
-                <!-- icons reales los tienes ya en tu CSS/HTML original -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -358,15 +366,10 @@ import Layout from '../layouts/Layout.astro';
             Agrega nuevas hojas al libro interactivo
           </h2>
           <p class="mt-3 text-sm text-slate-700">
-            La idea es que el glosario y el libro sean <strong>vivos</strong>.
-            Cada docente puede proponer nuevas páginas con actividades, ejemplos
-            de casos, rúbricas o adaptaciones curriculares que funcionen en su
-            contexto.
+            En este manual digital colaborativo, los docentes podrán contribuir incorporando nuevas estrategias multisensoriales, actividades, adaptaciones y recursos pertinentes a las necesidades de sus grupos.
           </p>
           <p class="mt-2 text-sm text-slate-700">
-            Más adelante esta sección podrá conectarse con un formulario o una
-            base de datos para subir directamente las hojas y aprobarlas desde
-            la coordinación.
+            La intención es que el manual se mantenga en constante crecimiento y actualización, convirtiéndose en una herramienta viva que refleje la creatividad, la experiencia y las buenas prácticas de toda la comunidad docente.
           </p>
         </div>
 
@@ -391,9 +394,7 @@ import Layout from '../layouts/Layout.astro';
         </button>
 
         <p class="text-xs text-slate-500">
-          Por ahora este botón es solo decorativo. En la siguiente fase lo
-          conectamos con un formulario (o base de datos) para subir la hoja en
-          PDF, imagen o plantilla editable.
+          En etapas posteriores, esta sección se vinculará con un formulario que permitirá subir directamente las propuestas en distintos formatos (PDF, imagen o plantilla editable), facilitando su revisión y aprobación por parte de la coordinación.
         </p>
       </div>
       </div>
