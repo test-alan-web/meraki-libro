@@ -2087,3 +2087,153 @@ button.learn-more:active::before {
   background: white;
   transform: rotateY(180deg);
 }
+/* ===========================
+   LIBRO RESPONSIVO MÓVIL
+   =========================== */
+
+/* Tablet y móvil grande */
+@media (max-width: 1024px) {
+  .book-container {
+    width: 95%;
+    max-width: 700px;
+  }
+  
+  .book-wrapper {
+    padding-top: 70%;
+  }
+}
+
+/* Móvil mediano */
+@media (max-width: 768px) {
+  .book-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0 1rem;
+  }
+  
+  .book-wrapper {
+    padding-top: 75%;
+    border-radius: 16px;
+  }
+  
+  .book-page {
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  .left-page {
+    left: 0;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  .right-page {
+    right: 0;
+    border-radius: 0 16px 16px 0;
+  }
+  
+  .flip-element {
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+  }
+  
+  /* Botones más pequeños en móvil */
+  .nav-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .book-container {
+    padding: 0 0.5rem;
+  }
+  
+  .book-wrapper {
+    padding-top: 85%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.15);
+  }
+  
+  .book-page {
+    border-radius: 12px 0 0 12px;
+  }
+  
+  .left-page {
+    border-radius: 12px 0 0 12px;
+  }
+  
+  .right-page {
+    border-radius: 0 12px 12px 0;
+  }
+  
+  /* Botones aún más compactos */
+  .nav-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Reducir sombra central */
+  .book-wrapper::after {
+    width: 1px;
+  }
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 360px) {
+  .book-wrapper {
+    padding-top: 95%;
+    border-radius: 10px;
+  }
+  
+  .book-page,
+  .left-page,
+  .right-page {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .right-page {
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .nav-button {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* Ajustes para el grid del libro en móvil */
+@media (max-width: 768px) {
+  /* Si tienes un grid en el HTML, ajustarlo a una columna */
+  #libro .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* La card de descarga ocupa todo el ancho */
+  .download-card {
+    max-width: 100%;
+  }
+}
+
+/* Orientación horizontal (landscape) en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .book-wrapper {
+    padding-top: 55%;
+  }
+  
+  .book-container {
+    max-width: 600px;
+  }
+}
+
+#libro .grid {
+    grid-template-columns: 1fr !important;
+    }
