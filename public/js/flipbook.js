@@ -3,34 +3,14 @@
 
 // 1. Lista de páginas del libro (en pares: izquierda, derecha)
 const pageImages = [
-  '/items/1.jpeg',
-  '/items/2.jpeg',
-  '/items/3.jpeg',
-  '/items/4.jpeg',
-  '/items/5.jpeg',
-  '/items/6.jpeg',
-  '/items/7.jpeg',
-  '/items/8.jpeg',
-  '/items/9.jpeg',
-  '/items/10.jpeg',
-  '/items/11.jpeg',
-  '/items/12.jpeg',
-  '/items/13.jpeg',
-  '/items/14.jpeg',
-  '/items/15.jpeg',
-  '/items/16.jpeg',
-  '/items/17.jpeg',
-  '/items/18.jpeg',
-  '/items/19.jpeg',
-  '/items/20.jpeg',
-  '/items/21.jpeg',
-  '/items/22.jpeg',
-  '/items/23.jpeg',
-  '/items/24.jpeg',
-  '/items/25.jpeg',
-  '/items/26.jpeg',
-  '/items/27.jpeg',
-  '/items/28.jpeg'
+  '/items/1.jpg',
+  '/items/2.jpg',
+  '/items/3.jpg',
+  '/items/4.jpg',
+  '/items/5.jpg',
+  '/items/6.jpg',
+  '/items/7.jpg',
+  '/items/8.jpg'
 ];
 
 // Cada "spread" es un par de páginas (izquierda/derecha)
