@@ -1028,15 +1028,15 @@ button.learn-more:active::before {
         transition: none !important;
       }
     }
-/* Responsive mejorado - HORIZONTAL (FILA) */
+/* Responsive mejorado - HORIZONTAL (FILA) - CORREGIDO */
 @media (max-width: 768px) {
   .tooltip-content {
-    min-width: 500px; /* MÁS ANCHO para horizontal */
+    min-width: 500px;
     max-width: 600px;
     padding: 24px 20px;
-    min-height: 200px;
-    max-height: 300px;
-    overflow-x: auto; /* Scroll horizontal si es necesario */
+    /* REMOVIDO: min-height y max-height restrictivos */
+    max-height: 90vh; /* Solo limita si es muy largo */
+    overflow-x: auto;
   }
   
   .tooltip-title {
@@ -1045,20 +1045,22 @@ button.learn-more:active::before {
   }
   
   .social-icons {
-    display: flex; /* FILA HORIZONTAL */
+    display: flex;
     flex-direction: row;
     gap: 14px;
-    justify-content: flex-start; /* Alineado a la izquierda */
-    flex-wrap: wrap; /* Se ajusta si no caben todas */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch; /* AÑADIDO: Los botones se estiran verticalmente */
   }
   
   .social-icon {
     padding: 16px 18px;
-    flex-direction: column; /* Icono arriba, texto abajo */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    min-width: 90px; /* Ancho fijo para cada botón */
+    min-width: 90px;
+    min-height: 110px; /* AÑADIDO: Altura mínima para cada botón */
   }
   
   .social-icon-wrapper {
@@ -1075,16 +1077,17 @@ button.learn-more:active::before {
   .social-icon-text {
     font-size: 13px;
     text-align: center;
+    white-space: nowrap; /* AÑADIDO: Evita que el texto se corte */
   }
 }
 
 @media (max-width: 480px) {
   .tooltip-content {
-    min-width: 450px; /* Ancho para que quepan las redes */
+    min-width: 450px;
     max-width: 550px;
     padding: 22px 18px;
-    min-height: 200px;
-    max-height: 300px;
+    /* REMOVIDO: min-height y max-height restrictivos */
+    max-height: 85vh;
   }
   
   .tooltip-title {
@@ -1094,19 +1097,21 @@ button.learn-more:active::before {
   
   .social-icons {
     display: flex;
-    flex-direction: row; /* HORIZONTAL */
+    flex-direction: row;
     gap: 12px;
     justify-content: flex-start;
     flex-wrap: wrap;
+    align-items: stretch;
   }
   
   .social-icon {
     padding: 14px 16px;
-    flex-direction: column; /* Icono arriba, texto abajo */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
     min-width: 85px;
+    min-height: 105px; /* AÑADIDO: Espacio para icono + texto */
   }
   
   .social-icon-wrapper {
@@ -1123,6 +1128,7 @@ button.learn-more:active::before {
   .social-icon-text {
     font-size: 12px;
     text-align: center;
+    white-space: nowrap;
   }
 }
 
@@ -1131,8 +1137,7 @@ button.learn-more:active::before {
     min-width: 340px;
     max-width: 400px;
     padding: 20px 16px;
-    min-height: 150px;
-    max-height: 180px;
+    /* REMOVIDO: min-height y max-height restrictivos */
   }
   
   .social-icons {
@@ -1142,6 +1147,7 @@ button.learn-more:active::before {
   .social-icon {
     padding: 12px 14px;
     min-width: 75px;
+    min-height: 100px; /* AÑADIDO */
   }
   
   .social-icon-wrapper {
@@ -1152,6 +1158,11 @@ button.learn-more:active::before {
   .social-icon svg {
     width: 20px;
     height: 20px;
+  }
+  
+  .social-icon-text {
+    font-size: 11px;
+    white-space: nowrap;
   }
 }
 /* ===========================
