@@ -1,15 +1,211 @@
 ---
+import '../styles/global.css';
 import Layout from '../../layouts/Layout.astro';
 ---
+<Layout title="Objetivo General · Manual Meraki">
+  <section class="section-hero">
+    <div class="mx-auto max-w-5xl px-6 py-12 lg:px-8">
+      <!-- Encabezado principal -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+          Objetivo General
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-meraki-pink to-meraki-blue mx-auto rounded-full"></div>
+      </div>
 
-<Layout title="Detalle · ¿Qué es la Psicopedagogía?">
-  <section class="mx-auto max-w-3xl px-4 py-16 lg:px-0">
-    <h1 class="text-3xl font-bold text-slate-900 mb-4">
-      ¿Qué es la Psicopedagogía?
-    </h1>
-    <p class="text-sm text-slate-700 leading-relaxed">
-      Aquí puedes desarrollar a detalle la explicación del concepto:
-      definición, autores clave, ejemplos de situaciones en secundaria, etc.
-    </p>
+      <!-- Card principal del objetivo -->
+      <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 mb-12 border-4 border-meraki-yellow">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-meraki-blue to-meraki-green rounded-2xl flex items-center justify-center text-3xl">
+            🎯
+          </div>
+          <div class="flex-1">
+            <h2 class="text-2xl font-display font-semibold text-slate-900 mb-4">
+              Propósito del Manual
+            </h2>
+            <p class="text-base text-slate-700 leading-relaxed">
+              Diseñar un manual digital colaborativo dirigido a docentes de secundaria, que promueva la aplicación de estrategias multisensoriales como herramienta de innovación educativa, fomentando la motivación, la participación activa y la comprensión significativa de los estudiantes en el proceso de enseñanza-aprendizaje.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Título de sección -->
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-3">
+          Fundamentos Teóricos
+        </h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Estado del conocimiento sobre el aprendizaje multisensorial
+        </p>
+      </div>
+
+      <!-- Grid de cards teóricas -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Card: Principio multisensorial -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/icons/brain.svg" alt="Cerebro" class="w-20 h-20" />
+              <h3 class="text-xl font-display font-bold text-slate-900">
+                Aprendizaje Multisensorial
+              </h3>
+              <p class="text-sm text-slate-600">
+                Haz clic para conocer más
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Las personas aprenden mejor cuando participan activamente a través de varios sentidos, lo cual permite que la información se procese y consolide con mayor efectividad. Este enfoque tiene respaldo en teorías constructivistas y humanistas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Jean Piaget -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/icons/piaget.svg" alt="Piaget" class="w-20 h-20" />
+              <h3 class="text-xl font-display font-bold text-slate-900">
+                Jean Piaget
+              </h3>
+              <p class="text-sm text-slate-600">
+                Constructivismo cognitivo
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Plantea que el conocimiento se construye a partir de la interacción entre el sujeto y su entorno. El aprendizaje es un proceso activo donde el estudiante asimila y acomoda nuevas experiencias.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Vygotsky -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/icons/vygotsky.svg" alt="Vygotsky" class="w-20 h-20" />
+              <h3 class="text-xl font-display font-bold text-slate-900">
+                Lev Vygotsky
+              </h3>
+              <p class="text-sm text-slate-600">
+                Constructivismo social
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Destaca la importancia del contexto social y la mediación del docente en el proceso de aprendizaje. La zona de desarrollo próximo es clave para el crecimiento cognitivo del estudiante.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Ausubel -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/icons/ausubel.svg" alt="Ausubel" class="w-20 h-20" />
+              <h3 class="text-xl font-display font-bold text-slate-900">
+                David Ausubel
+              </h3>
+              <p class="text-sm text-slate-600">
+                Aprendizaje significativo
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <p class="text-sm text-slate-700 leading-relaxed">
+                Enfatiza que el aprendizaje significativo ocurre cuando el nuevo conocimiento se relaciona con saberes previos del estudiante, creando estructuras cognitivas más complejas y duraderas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de beneficios -->
+      <div class="bg-gradient-to-br from-meraki-green to-meraki-blue rounded-3xl p-8 md:p-10 text-white mb-12">
+        <h3 class="text-2xl md:text-3xl font-display font-bold mb-6 text-center">
+          Beneficios Comprobados
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-3">
+            <span class="text-3xl">✨</span>
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Mayor Concentración</h4>
+              <p class="text-sm opacity-90">Mejora la atención sostenida en el aula</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-3xl">🧠</span>
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Retención de Información</h4>
+              <p class="text-sm opacity-90">Consolida el aprendizaje a largo plazo</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-3xl">🎨</span>
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Mayor Creatividad</h4>
+              <p class="text-sm opacity-90">Estimula el pensamiento divergente</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-3xl">🤝</span>
+            <div>
+              <h4 class="font-semibold text-lg mb-1">Participación Activa</h4>
+              <p class="text-sm opacity-90">Aumenta el compromiso del estudiante</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card final: El Manual -->
+      <div class="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-4 border-meraki-pink">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-meraki-pink to-meraki-yellow rounded-2xl flex items-center justify-center text-3xl">
+            📚
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">
+              El Aula que se Siente, se Escucha y se Vive
+            </h3>
+            <p class="text-base text-slate-700 leading-relaxed mb-4">
+              En este contexto, el manual <strong>"El aula que se siente, se escucha y se vive"</strong> surge como una propuesta de innovación educativa que responde a esta necesidad. Su formato digital colaborativo no solo ofrece estrategias y actividades multisensoriales, sino que también permite la participación.
+            </p>
+            <div class="bg-meraki-hero rounded-xl p-4 border-l-4 border-meraki-pink">
+              <p class="text-sm text-slate-700 font-medium">
+                💡 <strong>Innovación:</strong> Se ha identificado que existen pocos recursos diseñados específicamente para apoyar a los docentes en la planificación y aplicación práctica de este enfoque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 </Layout>
+
+<style>
+  /* Animación suave al cargar */
+  .flip-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .flip-card:nth-child(1) { animation-delay: 0.1s; }
+  .flip-card:nth-child(2) { animation-delay: 0.2s; }
+  .flip-card:nth-child(3) { animation-delay: 0.3s; }
+  .flip-card:nth-child(4) { animation-delay: 0.4s; }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
