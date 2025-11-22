@@ -1034,7 +1034,7 @@ button.learn-more:active::before {
     min-width: 500px; /* MÁS ANCHO para horizontal */
     max-width: 600px;
     padding: 24px 20px;
-    max-height: 90vh;
+    max-height: 200px;
     overflow-x: auto; /* Scroll horizontal si es necesario */
   }
   
@@ -1082,7 +1082,7 @@ button.learn-more:active::before {
     min-width: 450px; /* Ancho para que quepan las redes */
     max-width: 550px;
     padding: 22px 18px;
-    max-height: 85vh;
+    max-height: 200px;
   }
   
   .tooltip-title {
@@ -1129,6 +1129,7 @@ button.learn-more:active::before {
     min-width: 340px;
     max-width: 400px;
     padding: 20px 16px;
+    max-height: 180px;
   }
   
   .social-icons {
