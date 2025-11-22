@@ -1004,7 +1004,7 @@ button.learn-more:active::before {
       animation: pulse 3s infinite;
     }
 
-    /@media (max-width: 768px) {
+    @media (max-width: 768px) {
   .button-content {
     padding: 12px 24px;
   }
