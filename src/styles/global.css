@@ -1028,15 +1028,14 @@ button.learn-more:active::before {
         transition: none !important;
       }
     }
-/* Responsive mejorado - MÁS ALTO Y ANCHO */
+/* Responsive mejorado - HORIZONTAL (FILA) */
 @media (max-width: 768px) {
   .tooltip-content {
-    min-width: 360px;
-    max-width: 400px;
-    min-height: 480px; /* Altura mínima para que se vea todo */
+    min-width: 500px; /* MÁS ANCHO para horizontal */
+    max-width: 600px;
     padding: 24px 20px;
-    max-height: 90vh; /* No excede el 90% de la pantalla */
-    overflow-y: auto; /* Scroll si el contenido es muy largo */
+    max-height: 90vh;
+    overflow-x: auto; /* Scroll horizontal si es necesario */
   }
   
   .tooltip-title {
@@ -1045,16 +1044,20 @@ button.learn-more:active::before {
   }
   
   .social-icons {
-    grid-template-columns: 1fr; /* UNA COLUMNA - las redes en vertical */
+    display: flex; /* FILA HORIZONTAL */
+    flex-direction: row;
     gap: 14px;
+    justify-content: flex-start; /* Alineado a la izquierda */
+    flex-wrap: wrap; /* Se ajusta si no caben todas */
   }
   
   .social-icon {
     padding: 16px 18px;
-    flex-direction: row; /* Icono y texto en horizontal */
-    justify-content: flex-start;
-    gap: 14px;
-    min-height: 60px; /* Altura mínima para cada botón */
+    flex-direction: column; /* Icono arriba, texto abajo */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 90px; /* Ancho fijo para cada botón */
   }
   
   .social-icon-wrapper {
@@ -1069,16 +1072,15 @@ button.learn-more:active::before {
   }
   
   .social-icon-text {
-    font-size: 15px;
-    text-align: left;
+    font-size: 13px;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .tooltip-content {
-    min-width: 340px;
-    max-width: 380px;
-    min-height: 460px; /* Alto suficiente */
+    min-width: 450px; /* Ancho para que quepan las redes */
+    max-width: 550px;
     padding: 22px 18px;
     max-height: 85vh;
   }
@@ -1089,22 +1091,26 @@ button.learn-more:active::before {
   }
   
   .social-icons {
-    grid-template-columns: 1fr; /* UNA COLUMNA */
+    display: flex;
+    flex-direction: row; /* HORIZONTAL */
     gap: 12px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
   
   .social-icon {
     padding: 14px 16px;
-    flex-direction: row; /* Icono a la izquierda, texto a la derecha */
-    justify-content: flex-start;
-    gap: 12px;
-    min-height: 56px;
+    flex-direction: column; /* Icono arriba, texto abajo */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 85px;
   }
   
   .social-icon-wrapper {
     width: 44px;
     height: 44px;
-    flex-shrink: 0; /* No se encoge */
+    flex-shrink: 0;
   }
   
   .social-icon svg {
@@ -1113,22 +1119,25 @@ button.learn-more:active::before {
   }
   
   .social-icon-text {
-    font-size: 14px;
-    text-align: left;
+    font-size: 12px;
+    text-align: center;
   }
 }
 
 @media (max-width: 360px) {
   .tooltip-content {
-    min-width: 300px;
-    max-width: 340px;
-    min-height: 440px;
+    min-width: 340px;
+    max-width: 400px;
     padding: 20px 16px;
+  }
+  
+  .social-icons {
+    gap: 10px;
   }
   
   .social-icon {
     padding: 12px 14px;
-    min-height: 52px;
+    min-width: 75px;
   }
   
   .social-icon-wrapper {
@@ -1141,7 +1150,6 @@ button.learn-more:active::before {
     height: 20px;
   }
 }
-
 /* ===========================
    ESTILOS PARA EL LIBRO (flipbook)
    =========================== */
