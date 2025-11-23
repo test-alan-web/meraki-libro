@@ -415,23 +415,25 @@ import Layout from '../layouts/Layout.astro';
 
        <div class="flex flex-col items-start gap-4">
         <!-- Botón Create -->
-        <button class="btn-create">
-          <span>
-            <svg
-              height="24"
-              width="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
-                fill="currentColor"
-              ></path>
-            </svg>
-            Crear nueva hoja
-          </span>
-        </button>
+       <a href="/pages/lista-cotejo" style="text-decoration: none;">
+  <button class="btn-create">
+    <span>
+      <svg
+        height="24"
+        width="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+          fill="currentColor"
+        ></path>
+      </svg>
+      Crear nueva hoja
+    </span>
+  </button>
+</a>
 
         <p class="text-xs text-slate-500">
           En etapas posteriores, esta sección se vinculará con un formulario que permitirá subir directamente las propuestas en distintos formatos (PDF, imagen o plantilla editable), facilitando su revisión y aprobación por parte de la coordinación.
